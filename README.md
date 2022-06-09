@@ -1,6 +1,6 @@
 # nexus_raw_upload plugin
 
-[![fastlane Plugin Badge](https://rawcdn.githack.com/fastlane/fastlane/master/fastlane/assets/plugin-badge.svg)](https://rubygems.org/gems/fastlane-plugin-nexus_raw_upload)
+[![fastlane Plugin Badge](https://rawcdn.githack.com/fastlane/fastlane/master/fastlane/assets/plugin-badge.svg)](https://rubygems.org/gems/fastlane-plugin-nexus_raw_upload) ![Gem Version](https://badge.fury.io/rb/fastlane-plugin-nexus_raw_upload.svg) ![](https://ruby-gem-downloads-badge.herokuapp.com/fastlane-plugin-nexus_raw_upload) [![CircleCI](https://circleci.com/gh/thangnc/fastlane-plugin-nexus_raw_upload.svg?style=shield)](https://circleci.com/gh/thangnc/fastlane-plugin-nexus_raw_upload)
 
 ## Getting Started
 
