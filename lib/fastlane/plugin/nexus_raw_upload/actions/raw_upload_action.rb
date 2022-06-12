@@ -13,6 +13,8 @@ module Fastlane
         command += ssl_options(params)
         command += upload_options(params)
         command << upload_url(params)
+
+        Fastlane::Actions.sh(command.join(' '), log: params[:verbose])
       end
 
       def self.description
