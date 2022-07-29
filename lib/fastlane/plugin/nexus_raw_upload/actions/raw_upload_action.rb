@@ -6,15 +6,18 @@ module Fastlane
   module Actions
     class RawUploadAction < Action
       def self.run(params)
-        command = []
-        command << "curl"
-        command << verbose(params)
-        command << "--fail"
-        command += ssl_options(params)
-        command += upload_options(params)
-        command << upload_url(params)
+        args = []
+        args << "curl"
+        args << verbose(params)
+        args << "--fail"
+        args += ssl_options(params)
+        args += upload_options(params)
+        args << upload_url(params)
+        command = args.join(' ')
 
-        Fastlane::Actions.sh(command.join(' '), log: params[:verbose])
+        success = true
+        Fastlane::Actions.sh(command, log: params[:verbose], error_callback: -> (result) { success = false })
+        UI.user_error "raw_upload failed with status #{$?.exitstatus}: #{command}" unless success
       end
 
       def self.description
